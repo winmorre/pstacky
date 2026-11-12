@@ -1,4 +1,4 @@
-# UvenStacks
+# pstacky
 
 Our fork of [pstack](https://github.com/cursor/plugins/tree/main/pstack) from `cursor/plugins`, packaged for Claude Code and omp. One repository, one install script, same skills on every laptop.
 
@@ -7,19 +7,21 @@ Our fork of [pstack](https://github.com/cursor/plugins/tree/main/pstack) from `c
 Needs `git`, plus `claude` and/or `omp` on `PATH`. The script installs into whichever is present, at user scope.
 
 ```bash
-git clone git@github.com:Uven-Tech/UvenStacks.git ~/UvenStacks
-UVENSTACKS_SOURCE=git@github.com:Uven-Tech/UvenStacks.git ~/UvenStacks/install.sh
+git clone git@github.com:winmorre/pstacky.git ~/pstacky
+bash ~/pstacky/install.sh
 ```
 
-`UVENSTACKS_SOURCE` defaults to `Uven-Tech/UvenStacks`, the GitHub shorthand. Set it to the SSH URL when the repository is private and your git credentials are SSH keys. Rerun the same command to update. The clone itself is only needed for the script, since each tool keeps its own copy of the marketplace.
+Run the script with `bash` or `./install.sh`. Don't `source` it: it refuses, because sourcing would leave `set -e` on in your shell and the next failing command would close the terminal.
+
+`PSTACKY_SOURCE` sets where the tools fetch the marketplace from. It defaults to `winmorre/pstacky`, the GitHub shorthand. If the repository is private and your git credentials are SSH keys, use `PSTACKY_SOURCE=git@github.com:winmorre/pstacky.git bash ~/pstacky/install.sh`. Rerun the same command to update. The clone itself is only needed for the script, since each tool keeps its own copy of the marketplace.
 
 By hand, the script does this:
 
 | | Claude Code | omp |
 | --- | --- | --- |
-| add | `claude plugin marketplace add Uven-Tech/UvenStacks` | `omp plugin marketplace add Uven-Tech/UvenStacks` |
-| install | `claude plugin install pstack@uvenstacks` | `omp plugin install pstack@uvenstacks` |
-| update | `claude plugin marketplace update uvenstacks && claude plugin update pstack@uvenstacks` | `omp plugin marketplace update uvenstacks && omp plugin upgrade pstack@uvenstacks` |
+| add | `claude plugin marketplace add winmorre/pstacky` | `omp plugin marketplace add winmorre/pstacky` |
+| install | `claude plugin install pstack@pstacky` | `omp plugin install pstack@pstacky` |
+| update | `claude plugin marketplace update pstacky && claude plugin update pstack@pstacky` | `omp plugin marketplace update pstacky && omp plugin upgrade pstack@pstacky` |
 
 Then start a new session and pick models once per laptop:
 

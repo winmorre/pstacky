@@ -282,9 +282,9 @@ when a default changes, a rule written before the change still pins the old defa
 
 ## automations
 
-pstack also ships a dormant [benny automation pack](https://github.com/Uven-Tech/UvenStacks/tree/main/pstack/automations/benny). benny triages slack issue reports, then reproduces and fixes confirmed bugs with real ui evidence. its files are not registered as slash skills.
+pstack also ships a dormant [benny automation pack](https://github.com/winmorre/pstacky/tree/main/pstack/automations/benny). benny triages slack issue reports, then reproduces and fixes confirmed bugs with real ui evidence. its files are not registered as slash skills.
 
-to set it up, point cursor at [`FOR_AGENTS.md`](https://github.com/Uven-Tech/UvenStacks/blob/main/pstack/automations/benny/FOR_AGENTS.md). setup copies the pack into the target repository at `.cursor/automations/benny/`, enables pstack there for shared skills, and keeps user configuration outside the copied pack. benny runs on cursor automations, so it is cursor-only.
+to set it up, point cursor at [`FOR_AGENTS.md`](https://github.com/winmorre/pstacky/blob/main/pstack/automations/benny/FOR_AGENTS.md). setup copies the pack into the target repository at `.cursor/automations/benny/`, enables pstack there for shared skills, and keeps user configuration outside the copied pack. benny runs on cursor automations, so it is cursor-only.
 
 ## license
 

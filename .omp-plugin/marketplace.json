@@ -1,0 +1,23 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "pstacky",
+  "owner": {
+    "name": "winmorre"
+  },
+  "metadata": {
+    "description": "pstack for omp, forked from cursor/plugins."
+  },
+  "plugins": [
+    {
+      "name": "pstack",
+      "source": "./harness/pstack/omp",
+      "version": "0.15.36.ue8b1537d",
+      "description": "if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence.",
+      "author": {
+        "name": "Lauren Tan"
+      },
+      "homepage": "https://github.com/winmorre/pstacky/tree/main/pstack",
+      "license": "MIT"
+    }
+  ]
+}

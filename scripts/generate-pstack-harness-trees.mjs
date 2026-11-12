@@ -13,8 +13,8 @@ const AGENTS = join(PSTACK, "agents");
 const OUT = "harness/pstack";
 const GUIDE = "docs/guide";
 const COMMAND = "node scripts/generate-pstack-harness-trees.mjs";
-const GITHUB = "https://github.com/Uven-Tech/UvenStacks";
-const MARKETPLACE = { name: "uvenstacks", owner: { name: "Uven Tech" } };
+const GITHUB = "https://github.com/winmorre/pstacky";
+const MARKETPLACE = { name: "pstacky", owner: { name: "winmorre" } };
 const LINK = /\]\(([^)\s]+)\)/g;
 
 // One installable tree per harness. `adapter` is the pstack file that maps Cursor names to the harness;

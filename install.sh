@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
-# Install pstack from UvenStacks into Claude Code and omp at user scope. Rerun it to update.
-# UVENSTACKS_SOURCE sets where the marketplace comes from: owner/repo (default), a git URL, or a local path.
+# Install pstack from pstacky into Claude Code and omp at user scope. Rerun it to update.
+# PSTACKY_SOURCE sets where the marketplace comes from: owner/repo (default), a git URL, or a local path.
+
+# `source install.sh` would leave `set -e` on in your shell, so the next failing command closes it.
+if (return 0 2>/dev/null); then
+  echo "Run this script, don't source it: bash ${BASH_SOURCE[0]}" >&2
+  return 1
+fi
 set -euo pipefail
 
-SOURCE=${UVENSTACKS_SOURCE:-Uven-Tech/UvenStacks}
-MARKETPLACE=uvenstacks
+SOURCE=${PSTACKY_SOURCE:-winmorre/pstacky}
+MARKETPLACE=pstacky
 PLUGIN=pstack@$MARKETPLACE
 found=0
 
